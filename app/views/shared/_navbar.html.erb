@@ -1,25 +1,23 @@
 <div class="navbar-frame">
     <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="http://localhost:3000/lists/">
-      <%= image_tag "ticket.png", alt: "My Movie List", width: 20 %>
-      My movie List
-    </a>
-    <div class="items-buttons" id="myTopnav">
-      <ul class="items-buttons" style="list-style-type: none;">
-        <li><a id="btn-navbar-my-list" class="btn btn-outline-success my-2 my-sm-0" href="http://localhost:3000/lists" type="submit">My list</a></li>
-        <li><a id="btn-navbar-new-list" class="btn btn-outline-success my-2 my-sm-0" href="http://localhost:3000/lists/new" type="submit">New list</a></li>
-      </ul>
-      <div class="items-buttons-responsive">
-        <a id="icon" href="" data-toggle="dropdown">
-         <i class="fa fa-bars"></i>
-          <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://localhost:3000/lists/">My List</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://localhost:3000/lists/new">New list</a></li>
+      <a class="navbar-brand" href="http://localhost:3000/lists/">
+        <%= image_tag "ticket.png", alt: "My Movie List", width: 20 %>
+        My movie List
+      </a>
+        <div class="items-buttons"id="myTopnav">
+          <ul class="items-buttons" style="list-style-type: none;" >
+            <li><a id="btn-navbar-my-list" class="btn btn-outline-success my-2 my-sm-0" href="http://localhost:3000/lists" type="submit">My list</a></li>
+            <li><a id="btn-navbar-new-list" class="btn btn-outline-success my-2 my-sm-0" href="http://localhost:3000/lists/new" type="submit">New list</a></li>
           </ul>
-        </a>
-
-      </div>
-
-    </div>
-  </nav>
+          <div class="items-buttons responsive">
+            <a id="icon" href="" data-toggle="dropdown">
+              <i class="fa fa-bars"></i>
+            </a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role="presentation"><a class="menuItem"role="menuitem" tabindex="-1" href="http://localhost:3000/lists/">My ListRESP</a></li>
+                <li role="presentation"><a class="menuItem"role="menuitem" tabindex="-1" href="http://localhost:3000/lists/new">New listRESP</a></li>
+              </ul>
+          </div>
+        </div>
+    </nav>
 </div>

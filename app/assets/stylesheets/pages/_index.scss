@@ -4,33 +4,39 @@
 
 //Principal div
 #container-index{
-
-  width: 960px;
-  margin-left: 254px;
-  margin-right: 0px;
+  margin: 0 auto;
+  max-width:960px;
 }
 
 
 //Banner + Picture + texte (h3)
 .banner-index {
-  height: 549px;
+  display: flex;
+  height: auto;
 }
 
 .banner-index {
   .image-banner {
-    width: 960px;
+    position: relative;
+    max-width:100%;
+    max-height:100%;
   }
 }
 
-.banner-index h3 {
+.banner-index
+  #title-index {
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
-  position: relative;
-  bottom: 217px;
-  left: 324px;
+  position: absolute;
+  justify-content: center;
+  padding-left: 11px;
+  padding-top: 11px;
+
+
+
 }
 
 .banner-index h5 {
@@ -57,7 +63,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-end: 3;
   grid-gap: 37px;
-  height: 537px;
+  height: auto;
   width: 735px;
   padding-left: 29px;
 
@@ -77,9 +83,9 @@
 .container-lists{
   #btn-create-list{
     margin-left: 62px;
-    right: 19%;
-    top: 686px;
     margin-right: 84px;
+    position: relative;
+    float: right;
   }
 }
 
@@ -114,3 +120,18 @@
 
 
 
+@media screen and (max-width: 850px) {
+  .container-lists .box-cards {
+      grid-template-columns: 1fr 1fr;
+
+    }
+}
+
+@media screen and (max-width: 700px) {
+  .container-lists .box-cards{
+      grid-template-columns: 1fr;
+      width: 300px;
+    }
+
+
+}

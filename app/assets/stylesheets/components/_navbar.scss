@@ -1,7 +1,6 @@
 .navbar-frame {
   display: flex;
   justify-content: center;
-  overflow: hidden;
 }
 
 
@@ -35,7 +34,7 @@ top: 10px
 }
 
 .dropdown-menu.show {
-  display:none;
+
 }
 
 @media screen and (max-width: 580px) {
@@ -47,8 +46,9 @@ top: 10px
 
 
   .items-buttons.responsive #icon {
-    display: flex;
+    display: block;
     color: black;
+
 
 
   }
@@ -62,4 +62,10 @@ top: 10px
     margin-top: 0px;
     top: 52px;
   }
+}
+
+.AppMenuResponsive {
+  min-height: 100vh;
+  background-color: #282c34;
+  position: relative;
 }

@@ -26,16 +26,18 @@ import { initMoment } from '../components/init_moment';
 
 import { AppFormList } from '../components/AppFormList';
 
-import { initMenuToggle} from '../components/navbar.js';
+import { AppMenuResponsive } from '../components/AppMenuResponsive';
+
+import { initMenuToggle} from '../components/navbar';
 
 
 
 
 document.addEventListener('turbolinks:load', () => {
-
+  initMenuToggle();
   initRatingStars();
   initMoment();
-  initMenuToggle();
+
 
 });
 
