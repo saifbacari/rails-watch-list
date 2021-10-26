@@ -1,0 +1,17 @@
+<div class="banner">
+  <%= image_tag "main-image.jpg", alt: "rails-watch-list", width: 1468, height: 500 %>
+  <div class="container"><h3>Save any kind of movies</h3><h5>Classic</h5></div>
+</div>
+<div class="banner-lists">
+  <h3>My list</h3>
+    <button type="button" href="http://localhost:3000/lists/new" class="btn btn-primary"><a href="http://localhost:3000/lists/new" style="color:inherit">Créer une liste</a></button>
+      <div class="container-lists">
+       <% @lists.each do |list| %>
+          <div class="card">
+            <img src="/assets/funny.png">
+            <h4 class="name-mlist"><%= list.name %></h4>
+          </div>
+        <% end %>
+      </div>
+ </div>
+

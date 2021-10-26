@@ -1,0 +1,50 @@
+<%require 'open-uri'
+  require 'json'%>
+
+
+
+
+<div class="banner">
+  <div class="container-xl">
+    <h2><%=@list.name %></h2>
+  </div>
+</div>
+
+<ul id="results" class="list-inline">
+
+</ul>
+<div class="movies">
+      <%
+      url = 'http://tmdb.lewagon.com/movie/top_rated'
+
+      movie_serialized = URI.open(url).read
+      movie = JSON.parse(movie_serialized)
+      data = movie["results"]
+      movie_list = []
+    %>
+
+
+    <% data.each_with_index do |movie, index|
+      title_movie = data[index]["title"]
+        movie_list << title_movie
+      end
+     %>
+     <div class="form">
+           <div class="simple-form-javascript">
+              <%= link_to 'add a movie', new_list_bookmark_path(@list), class: 'btn btn-flat' %>
+          </div>
+     </div>
+
+          <div class="review">
+      <%= simple_form_for [@list, @review] do |f| %>
+          <%= f.input :comment %>
+        <%= f.button :submit %>
+      <% end %>
+     </div>
+</div>
+
+
+
+
+
+

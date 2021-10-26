@@ -1,0 +1,11 @@
+
+
+
+<div class="simple-form-html">
+  <%= simple_form_for [ @list, @bookmark], remote: true do |f| %>
+  <%= f.input :comment %>
+  <%= f.association :movie, input_html: { class: 'select2' }  %>
+  <%= f.submit "Submit review", class: "btn btn-primary" %>
+<% end %>
+</div>
+

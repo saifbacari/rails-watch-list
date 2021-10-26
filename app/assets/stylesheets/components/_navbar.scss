@@ -1,12 +1,62 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+.navbar-frame {
+  display: flex;
+  justify-content: center;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+
+.navbar{
+  height: 56px;
+  width: 960px;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+
+.items-buttons {
+  display:flex;
+  justify-content: center;
+}
+.items-buttons #btn-navbar-my-list {
+display:flex;
+color: grey;
+margin-left: 1px;
+margin-right: 14px;
+}
+
+.items-buttons #btn-navbar-new-list {
+color: grey;
+margin: 0px;
+}
+
+.items-buttons #icon {
+  display:none;
+  color: black;
+}
+
+.dropdown-menu.show {
+  display:none;
+}
+
+@media screen and (max-width: 580px) {
+  .items-buttons #btn-navbar-my-list, #btn-navbar-new-list {display: none;}
+
+  .items-buttons.responsive #btn-navbar-my-list, #btn-navbar-new-list {
+
+  }
+
+
+  .items-buttons.responsive #icon {
+    display: flex;
+    color: black;
+
+
+  }
+
+  .dropdown-menu.show {
+    right: 0px;
+    margin-left: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    margin-top: 0px;
+    top: 52px;
+  }
 }

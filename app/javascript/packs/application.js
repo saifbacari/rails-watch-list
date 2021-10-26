@@ -17,3 +17,12 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 
 import 'bootstrap';
+
+import { initMenuToggle } from '../components/navbar';
+
+document.addEventListener('turbolinks:load', () => {
+  initMenuToggle();
+});
+
+
+
