@@ -51,20 +51,61 @@
   margin: 16px;
 }
 
-.container-lists {
-  display: grid;
+
+.box-cards{
+    display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-end: 3;
-  grid-gap: 124px;
-  height:551px;
-  margin: 19px;
+  grid-gap: 37px;
+
 
 }
 
-.card-element {
-  height: 153px;
-  width:298px;
+.container-lists {
+  background-color: #F8F9FA;
+  padding-top: 45px;
+  padding-left: 44px;
+  padding-right: 44px;
 }
+
+
+.container-lists{
+  #btn-create-list{
+    margin-left: 62px;
+    right: 19%;
+    top: 686px;
+    margin-right: 84px;
+  }
+}
+
+//h4
+.container-lists{
+  .name-table-list {
+    width: 200px;
+    height: 50px;
+    padding-left: 96px;
+    margin-bottom: 0px;
+
+  }
+}
+
+.container-lists{
+  .card-element {
+    width: 226px;
+    height: 250px;
+}
+
+}
+
+.container-lists {
+  .box-cards{
+    margin-top: 84px;
+    width: 756px;
+    margin-left: 64px;
+  }
+}
+
+
 
 
 

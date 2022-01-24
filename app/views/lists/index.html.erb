@@ -6,14 +6,16 @@
           <h3>Save any kind of movies</h3>
     </div>
       <div class="container-lists">
-          <h4>My list</h4>
-          <button type="button" href="http://localhost:3000/lists/new" class="btn btn-primary"><a href="http://localhost:3000/lists/new" style="color:inherit">Créer une liste</a></button>
-          <% @lists.each do |list| %>
-          <div class="card-element">
-              <img src="/assets/funny.png">
-              <h4 class="name-list"><%= list.name %></h4>
+          <h4 class="name-table-list">My list</h4>
+          <button type="button" href="http://localhost:3000/lists/new" class="btn btn-primary" id="btn-create-list"><a href="http://localhost:3000/lists/new" style="color:inherit">Créer une liste</a></button>
+          <div class="box-cards">
+            <% @lists.each do |list| %>
+             <div class="card-element">
+               <img src="/assets/funny.png">
+               <h4 class="name-list"><%= list.name %></h4>
+             </div>
+             <% end %>
           </div>
-          <% end %>
       </div>
 </div>
 
