@@ -1,22 +1,284 @@
+
+#container-show{
+  margin: 0 auto;
+  width: 959px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+}
+//BANNER => OK
 .banner {
-  background-image: url(movie-genre.jpg);
-  height: 350px;
-   h2 {
-      position: fixed;
+  height: 359px;
+  justify-content: center;
+
+}
+
+
+
+
+.img-banner {
+  position: absolute;
+  object-fit: cover;
+  left:0px;
+}
+
+.container-lg{
+  justify-content: center;
+  padding-left: 0px;
+  padding-right: 0px;
+  display: flex;
+     h2 {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      margin-top: 142px;
+      margin-left: 117px;
+      color: #FFEFA0;
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.15em;
   }
 
-   .container {
-    height: 300px;
-    position: absolute;
-    left: 205px;
-    top: 79px;
+}
+
+.container-lg {
+  .img-banner{
+      width: 960px;
+      height: 358px;
+      max-width:100%;
+ }
+}
+
+//non inclu dans le banner ds le html mais visuellement dedans
+
+
+
+
+//CARDS-MOVIES-LIST => ALMOST OK
+//probleme pour faire séparer les reviews et les listings en 2 grandes divs => resolved !!!!
+//Problème pour mettre les cards separés horizontalement => resolved !
+//probleme pour ajuster la height dans la div cards automatiquement => à moitié résolu => on a solutionné avec fit-content
+
+
+.container-movie{
+  margin: 0 auto;
+  margin-left: 0px;
+  min-height: 100px;
+  overflow: hidden;
+  height: fit-content;
+  background-color: #F8F9FA;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 85px;
+  border-bottom-width: 1px;
+  }
+
+.container-movie{
+  .btn-info {
+
+    margin-left: 0px;
+    margin-top: 22px;
+    top: 0px;
+    right: 0px;
+    left: 86%;
+    bottom: 0px;
+    height: 43px;
+    }
+
+  }
+
+  .container-movie {
+    .btn-info {
+      position: absolute;
+    }
+  }
+
+
+  .container-movie{
+    #button-add-movie{
+      top: 383px;
+      width:112px;
+      right: 6%
+    }
+  }
+
+
+  .container-movie{
+  .cards {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 16px;
+    height: 864px;
+    font: normal 0.9em 'Lato', sans-serif;
   }
 }
 
-.movies {
+
+.container-movie {
+  .card {
+    height: 406px;
+    width: 210px;
+    border-style: none;
+    box-shadow: 2px 2px 3px #E0E1E2;
+  }
+}
+
+
+
+//REVIEWS-FORMS => Ajuster la taille de la div et le centrer
+
+
+.reviews-form {
+  margin-left: 0px;
+  background-color: #F8F9FA;
+}
+
+.simple_form {
+  color:green;
+  padding-top: 72px;
+  font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+.reviews-form {
+  #form-comment-note{
+    margin-right: 35px;
+    margin-top: 28px;
+  }
+}
+
+#form-comment-note {
+  .barre-commentaire {
+    width: 326px;
+    border-style: none;
+  }
+}
+
+#form-comment-note{
+  #blue-button {
+    margin-left: 103px;
+  }
+}
+
+.btn-primary {
+  margin-left:0px;
+}
+
+
+
+
+.rating {
+   width: 180px;
+}
+
+.rating__star {
+   cursor: pointer;
+   color: #dabd18b2;
+}
+
+.fa-star {
+  color:  #FFD700;
+}
+
+.review-rating {
+  cursor:    pointer;
+  font-size: 1rem;
+}
+
+#comment-line {
+  border-top-width: 1px;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+
+.container-reviews {
+  padding-top: 28px;
+  padding-left: 48px;
+  padding-bottom: 1px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+.container-reviews {
+  #review-date {
+    font-weight: light;
+  }
+}
+
+//RESPONSIVE SCREENS
+
+@media screen and (max-width: 580px) {
+  .container-sm #new_review {
+    width: 330px;
+  }
+
+  .container-sm {
+    width: 362px;
+    margin-right: 100px;
+    margin-left: 20px;
+  }
+}
+
+
+@media screen and (max-width: 1080px) {
+  .container-movie .cards{
+      grid-template-columns: 1fr 1fr;
+
+    }
+}
+
+//A ranger
+
+#form-comment-note {
+  display: flex;
+  right: 283px;
+  top: 483px;
+  float: right;
+  width: 413px;
+  height: 278px;
+  margin-top: 67px;
+  padding-top: 0px;
+  padding-left:  23px;
+  padding-right: 23px;
+  margin-right:1px;
+  background: beige;
+}
+
+#reviews {
+  width: 502px;
+  padding-top: 83px;
+}
+
+.container-sm .btn-success {
+  margin-right: 46px;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.name-list{
+  display: flex;
+}
+
+.container {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
   color: green;
-  height: 124px;
+}
+
+.container-sm {
+  padding-top: 46px;
+}
+
+.btn {
+  position: absolute;
+  margin-left: 1030px;
+  white-space: nowrap;
+  text-align: center;
+  text-decoration: none;
+
 }

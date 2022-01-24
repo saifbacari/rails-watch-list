@@ -22,6 +22,7 @@ class ListsController < ApplicationController
     @list = List.find(params[:id])
     @bookmark = Bookmark.new
     @review = Review.new(list: @list)
+    @reviews = @list.reviews
   end
 
   def destroy

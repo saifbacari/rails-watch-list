@@ -20,8 +20,14 @@ import 'bootstrap';
 
 import { initMenuToggle } from '../components/navbar';
 
+import { initRatingStars } from '../components/init_rating_stars';
+
+import { initMoment } from '../components/init_moment';
+
 document.addEventListener('turbolinks:load', () => {
   initMenuToggle();
+  initRatingStars();
+  initMoment();
 });
 
 

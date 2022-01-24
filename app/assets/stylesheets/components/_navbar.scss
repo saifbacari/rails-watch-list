@@ -1,6 +1,7 @@
 .navbar-frame {
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 
@@ -17,13 +18,15 @@
 .items-buttons #btn-navbar-my-list {
 display:flex;
 color: grey;
-margin-left: 1px;
-margin-right: 14px;
+margin-left: -65px;
+margin-right: 0px;
+top: 10px;
 }
 
 .items-buttons #btn-navbar-new-list {
 color: grey;
-margin: 0px;
+margin-left: -155px;
+top: 10px
 }
 
 .items-buttons #icon {

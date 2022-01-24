@@ -1,3 +1,70 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "show";
+
+//Principal div
+#container-index{
+
+  width: 960px;
+  margin-left: 254px;
+  margin-right: 0px;
+}
+
+
+//Banner + Picture + texte (h3)
+.banner-index {
+  height: 549px;
+}
+
+.banner-index {
+  .image-banner {
+    width: 960px;
+  }
+}
+
+.banner-index h3 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 217px;
+  left: 550px;
+}
+
+.banner-index h5 {
+  font-size: 20px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  position: absolute;
+  bottom: 142px;
+  left: 700px;
+}
+
+
+
+
+.banner-lists {
+  width: 1000px;
+  height: 300px;
+  margin: 16px;
+}
+
+.container-lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-end: 3;
+  grid-gap: 124px;
+  height:551px;
+  margin: 19px;
+
+}
+
+.card-element {
+  height: 153px;
+  width:298px;
+}
+
+
+
