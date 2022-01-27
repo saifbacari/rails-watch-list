@@ -11,13 +11,21 @@
           <div class="box-cards">
             <% @lists.each do |list| %>
              <div class="card-element">
-               <img src="/assets/funny.png">
-               <h4 class="name-list"><%= list.name %></h4>
+              <a href="http://localhost:3000/lists/<%= list.id %>">
+                 <image>
+                   <% if (@list.avatar.attached?) %>
+                   <% image  %>
+                     <img src="<%= (url_for(@list.avatar)) %>">
+                    <% end %>
+
+                 <h4 class="name-list"><%= list.name %></h4>
+               </a>
              </div>
              <% end %>
           </div>
       </div>
 </div>
+
 
 
 
