@@ -1,14 +1,16 @@
 
 <div class="container-new">
   <div class="form-create-list">
-    <ul><%= form_for(@list) do |f| %></ul>
+    <ul><%= simple_form_for(@list) do |f| %></ul>
         <li><%= f.label :name %>
         <%= f.text_field :name %></li>
-        <li><%= f.file_field :avatar %></li>
+        <li><%= f.input :avatar, as: :file %></li>
         <%= f.submit %>
+
       <% end %>
   </div>
+
 </div>
 
 
-
+<%= react_component("HelloWorld", { greeting: "Hello from react-rails." }) %>

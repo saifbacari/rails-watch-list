@@ -11,21 +11,19 @@
           <div class="box-cards">
             <% @lists.each do |list| %>
              <div class="card-element">
-              <a href="http://localhost:3000/lists/<%= list.id %>">
-                 <image>
-                   <% if (@list.avatar.attached?) %>
-                   <% image  %>
-                     <img src="<%= (url_for(@list.avatar)) %>">
-                    <% end %>
 
-                 <h4 class="name-list"><%= list.name %></h4>
+              <a href="http://localhost:3000/lists/<%= list.id %>">
+                <h4 class="name-list"><%= list.name %></h4>
+                <% if list.avatar.attached? %>
+                <%= cl_image_tag list.avatar.key, height: 150, width: 150, crop: :fill %>
+                  <%end %>
+
                </a>
              </div>
              <% end %>
           </div>
       </div>
 </div>
-
 
 
 

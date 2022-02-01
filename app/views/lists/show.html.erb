@@ -2,8 +2,9 @@
   require 'json'%>
 <div class="col-12 col-6" id="container-show">
   <div class="banner">
-    <div class="container-lg">
-      <%= image_tag "movie-genre.jpg", alt: "My Movie List", class: "img-banner" %>
+    <div class="img-banner">
+
+          <%= cl_image_tag @list.avatar.key,:width=>"auto:breakpoints_200_1920_30_15", :client_hints => :true, :crop => "scale" %>
       <h2><%=@list.name %></h2>
     </div>
 

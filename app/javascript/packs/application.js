@@ -24,6 +24,7 @@ import { initRatingStars } from '../components/init_rating_stars';
 
 import { initMoment } from '../components/init_moment';
 
+
 document.addEventListener('turbolinks:load', () => {
   initMenuToggle();
   initRatingStars();
@@ -32,3 +33,7 @@ document.addEventListener('turbolinks:load', () => {
 
 
 
+// Support component names relative to this directory:
+var componentRequireContext = require.context("components", true);
+var ReactRailsUJS = require("react_ujs");
+ReactRailsUJS.useContext(componentRequireContext);
