@@ -28,9 +28,9 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
-  position: absolute;
+  position: relative;
   bottom: 217px;
-  left: 550px;
+  left: 324px;
 }
 
 .banner-index h5 {
@@ -57,9 +57,14 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-end: 3;
   grid-gap: 37px;
+  height: 537px;
+  width: 735px;
+  padding-left: 29px;
 
 
 }
+
+
 
 .container-lists {
   background-color: #F8F9FA;

@@ -30,14 +30,11 @@
 
 .img-banner{
        h2 {
-      top: 50%;
-      width: 0px;
-      left: 50%;
-      transform: translate(-50%, -50%);
       margin-top: 142px;
       color: #FFEFA0;
       font-family: 'Outfit', sans-serif;
       font-size: 2.15em;
+      position: absolute;
   }
 }
 
@@ -200,6 +197,8 @@
   padding-left: 48px;
   padding-bottom: 1px;
   font-family: 'Source Sans Pro', sans-serif;
+  width: 959px;
+  height: 307px;
 }
 
 

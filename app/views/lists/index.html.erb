@@ -11,9 +11,9 @@
           <div class="box-cards">
             <% @lists.each do |list| %>
              <div class="card-element">
+                <h5 class="name-list" style="text-decoration:none;"S><%= list.name %></h5>
 
               <a href="http://localhost:3000/lists/<%= list.id %>">
-                <h4 class="name-list"><%= list.name %></h4>
                 <% if list.avatar.attached? %>
                 <%= cl_image_tag list.avatar.key, height: 150, width: 150, crop: :fill %>
                   <%end %>
@@ -23,6 +23,7 @@
              <% end %>
           </div>
       </div>
+      <button id="test2"></button>
 </div>
 
 
