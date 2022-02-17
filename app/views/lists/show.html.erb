@@ -28,6 +28,7 @@
           <div class="container-movie" id="cards-movies-list">
             <div class="button"><%= link_to 'Add a movie', new_list_bookmark_path(@list), class: 'btn btn-success', id:'button-add-movie' %></div>
               <% movie = Movie.all %>
+              <% bookmark = Bookmark.all %>
                 <% bookmark = Bookmark.where("list_id = #{@list.id}")
                 films_list = []
                  bookmark.each do |element|
@@ -37,17 +38,26 @@
                  films_list.each do |element|
                   card << element.movie
                 end
+
+                  comments = []
+                bookmark.each do |element|
+                  comments << element.comment
+                end
+
+
                 %>
 
 
                 <div class="cards">
-                     <% card.each do |element| %>
+                     <% card.each_with_index do |element,index| %>
                     <div class="card">
                         <%= element.title  %>
                         <img src="<%= element.poster_url %>" alt="" class="film">
                         <%= element.overview %>
+                        <%= comments[index] %>
                     </div>
                         <% end %>
+
                 </div>
                 <button type="button" class="btn btn-info"><%= card.count %>  <%= "movies" %></button>
           </div>
@@ -78,10 +88,15 @@
                     <%= review.comment %>
                   </p>
                  <% end %>
+
                 </div>
             </div>
           </div>
+           <%= react_component("AppFormList", lists: @lists) %>
         </div>
+
+
+
 
 
 

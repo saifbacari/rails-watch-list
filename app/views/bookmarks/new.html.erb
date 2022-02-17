@@ -1,13 +1,15 @@
 
 
 <div class="container-bookmark-new">
-  <div class="simple-form-html">
+  <div class="simple-form-html" id="simplef">
     <%= simple_form_for [ @list, @bookmark], remote: true do |f| %>
-    <%= f.input :comment %>
+    <%= react_component 'PostForm', { list: @list, bookmark: @bookmark } %>
     <%= f.association :movie, input_html: { class: 'select2' }  %>
-    <%= f.submit "Submit review", class: "btn btn-primary", id: "test" %>
     <% end %>
+
   </div>
 </div>
+
+
 
 

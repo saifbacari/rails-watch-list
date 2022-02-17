@@ -25,6 +25,10 @@ import { initRatingStars } from '../components/init_rating_stars';
 
 import { initMoment } from '../components/init_moment';
 
+import { AppFormList } from '../components/AppFormList';
+
+import { PostForm} from '../components/PostForm';
+
 
 
 
@@ -32,6 +36,8 @@ document.addEventListener('turbolinks:load', () => {
   initMenuToggle();
   initRatingStars();
   initMoment();
+  AppFormList();
+  PostForm();
 });
 
 
