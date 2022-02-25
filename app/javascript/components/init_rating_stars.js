@@ -1,3 +1,5 @@
+
+
 // je créé une fonction qui va changer la classe appliquée aux étoiles
 const toggleColorStars = (stars, rating) => {
   stars.forEach((star) => {

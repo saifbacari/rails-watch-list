@@ -19,7 +19,6 @@ require("channels")
 
 import 'bootstrap';
 
-import { initMenuToggle } from '../components/navbar';
 
 import { initRatingStars } from '../components/init_rating_stars';
 
@@ -27,24 +26,25 @@ import { initMoment } from '../components/init_moment';
 
 import { AppFormList } from '../components/AppFormList';
 
-import { PostForm} from '../components/PostForm';
+import { initMenuToggle} from '../components/navbar.js';
 
 
 
 
 document.addEventListener('turbolinks:load', () => {
-  initMenuToggle();
+
   initRatingStars();
   initMoment();
-  AppFormList();
-  PostForm();
+  initMenuToggle();
+
 });
 
 
 
 // Support component names relative to this directory:
-var componentRequireContext = require.context("components", true);
-var ReactRailsUJS = require("react_ujs");
-ReactRailsUJS.useContext(componentRequireContext);
 
 
+var myCustomContext = require.context("components", true)
+var ReactRailsUJS = require("react_ujs")
+// use `custom_components/` for <%= react_component(...) %> calls
+ReactRailsUJS.useContext(myCustomContext)

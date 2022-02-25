@@ -15,7 +15,7 @@
 
               <a href="http://localhost:3000/lists/<%= list.id %>">
                 <% if list.avatar.attached? %>
-                <%= cl_image_tag list.avatar.key, height: 150, width: 150, crop: :fill %>
+                <%= cl_image_tag list.avatar.key, height: 150, width: 150, crop: :fill, :radius => 20 %>
                   <%end %>
 
                </a>
